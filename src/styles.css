@@ -1,0 +1,28 @@
+.map-container {
+  width: 100%;
+  height: 500px; /* Exemplo de altura ajustada */
+  margin-top: 30px; /* Ajuste conforme necessário */
+  z-index: 2;
+  transition: all 1.0s ease; /* Para suavizar o efeito de transição */
+  background-color: rgb(107, 107, 107);
+}
+
+.filtros-servicos {
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+  justify-content: center; /* Centraliza os itens horizontalmente */
+  flex-wrap: wrap;
+}
+
+.filtros-servicos label {
+  color: #000000; /* Altera a cor do texto para vermelho */
+  background-color: #ffffff; /* Cor de fundo azul claro adicionada */
+  border-radius: 15px; /* Adiciona bordas arredondadas */
+}
+
+.mapa-expandido, .mapa-expandido .leaflet-container {
+  height: 1020px; /* Altura expandida */
+  background-color: rgb(226, 215, 215); /* Mudança de cor */
+  
+}

@@ -1,0 +1,209 @@
+@keyframes borderAnimation {
+  0% {
+    border: 4px solid red;
+  }
+  50% {
+    border: 4px solid yellow;
+  }
+  100% {
+    border: 4px solid red;
+  }
+}
+
+.dashboard-border {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none; /* Permite clicar através da borda */
+  box-sizing: border-box;
+  z-index: 1000;
+  animation: borderAnimation 2s linear infinite;
+}
+.sidebar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 250px;
+  height: 100%;
+  background-color: #73879C;
+  padding: 20px;
+  box-sizing: border-box;
+  z-index: 1000;
+  transition: transform 0.5s ease, margin-left 0.5s ease;
+  transform: translateX(-100%); /* Sidebar começa oculta */
+}
+
+.sidebar-visible {
+  transform: translateX(0);
+}
+
+.dashboard-container.sidebar-open .sidebar {
+  transform: translateX(0);
+}
+
+.dashboard-main-content {
+  transition: margin-left 0.5s ease;
+  margin-left: 0;
+}
+
+.dashboard-container.sidebar-open .dashboard-main-content {
+  margin-left: 250px;
+}
+
+.sidebar-toggle {
+  position: fixed;
+  top: 10px;
+  left: 10px;
+  z-index: 1010;
+  width: 40px;
+  height: 40px;
+  cursor: pointer;
+  background: none;
+  border: none;
+  padding: 0;
+}
+
+.auto-change-control {
+  margin-top: 20px;
+  text-align: center;
+}
+
+.auto-change-control button {
+  padding: 10px 20px;
+  background-color: #197296;
+  color: white;
+  border: none;
+  border-radius: 30px;
+  cursor: pointer;
+  font-size: 1em;
+}
+
+.auto-change-control button:hover {
+  background-color: #d41515;
+}
+
+.toggle-btn {
+  position: fixed;
+  top: 10px;
+  left: 10px;
+  z-index: 1010;
+  width: 40px; /* Largura da imagem */
+  height: 40px; /* Altura da imagem */
+  cursor: pointer;
+  background: none; /* Sem fundo */
+  border: none; /* Sem borda */
+  padding: 0; /* Sem padding */
+}
+
+.sidebar button {
+  display: block; /* Faz com que os botões preencham a largura da sidebar */
+  width: 100%;
+  padding: 5px;
+  margin-bottom: 10px; /* Espaço entre os botões */
+  background-color: rgba(35, 18, 129, 0.877);
+  color: white; /* Cor do texto dos botões */
+  border: none; /* Remove a borda dos botões */
+  border-radius: 5px; /* Arredonda os cantos dos botões */
+  cursor: pointer; /* Muda o cursor para indicar que é clicável */
+}
+
+/* Estilizando o contêiner do DatePicker */
+.custom-datepicker .react-datepicker__input-container input {
+  background-color: #fff; /* Cor de fundo do input */
+  color: #333; /* Cor do texto do input */
+  border: 1px solid #ccc; /* Borda do input */
+  border-radius: 4px; /* Cantos arredondados */
+  padding: 8px; /* Espaçamento interno */
+}
+
+/* Estilizando o calendário */
+.custom-datepicker .react-datepicker {
+  border: none;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+  width: auto; /* Ajusta a largura para conter o conteúdo */
+}
+
+.custom-datepicker .react-datepicker__header {
+  background-color: #007bff; /* Cabeçalho azul */
+  border-top-left-radius: 4px;
+  border-top-right-radius: 4px;
+  color: white;
+  padding: 10px;
+  position: relative; /* Necessário para posicionamento absoluto das setas */
+}
+
+.custom-datepicker .react-datepicker__current-month {
+  color: rgb(0, 0, 0);
+  font-size: 1.2em;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.custom-datepicker .react-datepicker__navigation {
+  top: 50%;
+  transform: translateY(-50%);
+  line-height: 1.7em;
+  border: none; /* Remove a borda padrão */
+  background: transparent; /* Remove o fundo padrão */
+  cursor: pointer; /* Cursor de ponteiro */
+  padding: 0;
+}
+
+.custom-datepicker .react-datepicker__navigation--previous {
+  left: 10px;
+}
+
+.custom-datepicker .react-datepicker__navigation--next {
+  right: 10px;
+}
+
+.custom-datepicker .react-datepicker__navigation-icon::before {
+  border-color: white;
+  border-width: 2px 2px 0 0;
+  content: '';
+  display: inline-block;
+  height: 8px;
+  width: 8px;
+  transform: rotate(135deg);
+}
+
+.custom-datepicker .react-datepicker__navigation--previous .react-datepicker__navigation-icon::before {
+  transform: rotate(-45deg);
+}
+
+.custom-datepicker .react-datepicker__navigation--next .react-datepicker__navigation-icon::before {
+  transform: rotate(135deg);
+}
+
+.custom-datepicker .react-datepicker__day-name,
+.custom-datepicker .react-datepicker__day,
+.custom-datepicker .react-datepicker__time-name {
+  width: 2.5em;
+  line-height: 2.5em;
+  margin: 0.166em;
+  color: #333;
+}
+
+.custom-datepicker .react-datepicker__day--selected,
+.custom-datepicker .react-datepicker__day--keyboard-selected {
+  background-color: #fa0505; /* Dia selecionado */
+  color: white;
+}
+
+.custom-datepicker .react-datepicker__day:hover {
+  background-color: #0056b3; /* Dia ao passar o mouse */
+  color: white;
+}
+
+.custom-datepicker .react-datepicker__day--outside-month {
+  color: #ccc;
+}
+
+.custom-datepicker .react-datepicker__day--today {
+  font-weight: bold;
+  color: #ffffff;
+}

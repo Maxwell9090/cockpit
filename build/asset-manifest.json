@@ -1,0 +1,19 @@
+{
+  "files": {
+    "main.css": "/static/css/main.4829b106.css",
+    "main.js": "/static/js/main.b6e37662.js",
+    "static/js/453.2abc7fb8.chunk.js": "/static/js/453.2abc7fb8.chunk.js",
+    "static/media/warning.gif": "/static/media/warning.bd1dd42d8d0d9417e7a8.gif",
+    "static/media/farol.gif": "/static/media/farol.e91433320a932ff53a50.gif",
+    "static/media/rede3.jpg": "/static/media/rede3.284addc7b70d8933bb05.jpg",
+    "static/media/loading.gif": "/static/media/loading.b51df3f3ec072548cb48.gif",
+    "index.html": "/index.html",
+    "main.4829b106.css.map": "/static/css/main.4829b106.css.map",
+    "main.b6e37662.js.map": "/static/js/main.b6e37662.js.map",
+    "453.2abc7fb8.chunk.js.map": "/static/js/453.2abc7fb8.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.4829b106.css",
+    "static/js/main.b6e37662.js"
+  ]
+}
