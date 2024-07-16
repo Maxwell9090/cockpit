@@ -11,7 +11,7 @@ const Login = () => {
     e.preventDefault();
 
     try {
-      const response = await fetch('http://172.30.20.76:3001/authenticate', {
+      const response = await fetch('http://172.26.13.52:3002/authenticate', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
